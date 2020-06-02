@@ -2,32 +2,37 @@ import React from 'react';
 import './App.css';
 
 function App() {
-  var name ='Jasim Uddin';
-  const person ={
-    name:'Jasim Uddin',
-    age:33,
-    job:'Supervisor'
-  }
+ const name = 'Jasim uddin';
 
-  const player ={
-    name:'Ibrahim',
-    country:'Bangladesh',
-    age: 33,
-  }
-  const style ={
-    color:'red',
-    fontWeight:'bold',
-    backgroundColor:'green',
-  }
+ const person = {
+   name:'Jasim Uddin',
+   job: 'Supervisor',
+   age:'33'
+ }
+
+ const player ={
+   name:'Ibarahim',
+   country:'Bangladesh',
+   age:'45'
+ }
+
+ const personStyle ={
+   color:'cyan',
+   backgroundColor:'green',
+   border:'1px solid lightgray'
+ }
+  
   return (
-    <div>
-     <h4>This is react Person </h4>
-  <h2 style={{color:'cyan'}}> Person Details:{person.name + " " + person.job}</h2>
-     <h3>Name :{name} </h3>
-  <h3 className="" style={style}>Player Details : {player.name + " " + player.age}</h3>
+    <h1>This Number 22-5 Part onl explain about Component identity </h1>
+    <div style={personStyle}className="information">
+      <h3 style={{color:'red'}}>Name:{name}</h3>
+      <h2>Person Details: {person.name + " " + person.job }</h2>
+      <h3>Player Details: {player.name + " " + player.country}</h3>
+ 
    </div>
   );
 }
+
 
 
 
