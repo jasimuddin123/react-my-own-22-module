@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 
@@ -86,7 +86,11 @@ function App() {
       <Product product={products[0]}> </Product>
       <Product></Product>
       <Product></Product>
+
+      <Counter></Counter>
     </div>
+
+      
 
 
   );
@@ -138,6 +142,16 @@ function Product(props) {
       <h3>Price:</h3>
       <button>Buy Now</button>
 
+    </div>
+
+  )
+}
+
+function Counter(){
+const [count, setCount] = useState(10);
+  return(
+    <div>
+    <h3>Count: {count} </h3>
     </div>
 
   )
