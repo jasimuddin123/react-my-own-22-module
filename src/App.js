@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 
@@ -88,6 +88,7 @@ function App() {
       <Product></Product>
 
       <Counter></Counter>
+      <Users></Users>
     </div>
 
 
@@ -159,4 +160,27 @@ function Counter() {
   )
 }
 
+
+function Users(){
+  const [users, setUsers] = useState([]);
+
+    useEffect(() =>{
+      fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => setUsers(data))
+
+    },[]);
+
+  return(
+    <div>
+      <h2>Dynamic User:{users.length} </h2>
+      <ul>
+        {
+          users.map(user =><li>{user.name}</li>)
+        }
+      </ul>
+    </div>
+
+  )
+}
 export default App;
